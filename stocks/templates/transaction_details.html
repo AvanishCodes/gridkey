@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trade details for {{company.name}}</title>
+    <style>
+      * {
+        align-content: center;
+        /* text-align: center; */
+        /* margin-left: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>{{company.name}}</h1>
+      {% if trades %}
+      <table>
+        <tr>
+          <th>#</th>
+          <th>company</th>
+          <th>timestamp</th>
+          <th>trade_type</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>amount</th>
+          <th>outstanding_qty</th>
+          <th>outstanding_amount</th>
+          <th>avg_buy_price</th>
+        </tr>
+        {% for trade in trades %}
+        <tr>
+          <td>{{trade.id}}</td>
+          <td>{{company.symbol}}</td>
+          <td>{{trade.timestamp}}</td>
+          <td>{{trade.trade_type}}</td>
+          <td>{{trade.price}}</td>
+          <td>{{trade.qty}}</td>
+          <td>{{trade.amount}}</td>
+          <td>{{trade.outstanding_qty}}</td>
+          <td>{{trade.outstanding_amount}}</td>
+          <td>{{trade.avg_buy_price}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>No trades found.</p>
+      {% endif %}
+    </center>
+  </body>
+</html>

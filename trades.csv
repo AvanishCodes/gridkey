@@ -1,0 +1,5 @@
+company,timestamp,trade_type,price,qty,amount,outstanding_qty,outstanding_amount,avg_buy_price
+A,2022-12-21T05:31:28.944000Z,B,14.0,10.0,140.0,0.0,0.0,None
+A,2022-12-22T05:31:28.944000Z,B,4.0,70.0,280.0,50.0,0.0,None
+A,2022-12-23T05:31:28.944000Z,B,10.0,500.0,5000.0,500.0,0.0,None
+A,2022-12-24T05:31:28.944000Z,S,10.0,14.0,140.0,0.0,0.0,None
