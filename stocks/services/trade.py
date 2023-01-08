@@ -32,7 +32,7 @@ def create_trade(trade_data: dict) -> Trade | dict:
                         qty=qty,
                         outstanding_qty=qty,
                         price=price,
-                        outstanding_amount=price,
+                        outstanding_amount=amount,
                         amount=amount,
                         total_exit=total_exit,
                     )
